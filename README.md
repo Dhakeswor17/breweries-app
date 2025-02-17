@@ -1,50 +1,22 @@
-# React + TypeScript + Vite
+Breweries App
+Fetch, display, and search for brewery companies from the given API endpoint, using React and TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Requirements
+Check the documentation at https://www.openbrewerydb.org/documentation Fetch and display information of all the companies.
 
-Currently, two official plugins are available:
+Have proper display and routing that user can switch to/back from specific company's detailed page
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Create search component to enable user to input text and search for companies by name.
 
-## Expanding the ESLint configuration
+Use MaterialUI to make your design more appealing and responsive
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Implement performance optimization where applicable
 
-- Configure the top-level `parserOptions` property like this:
+Deploy your application and rewrite README file
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Optional
+Use the queries listed in the documentation to sort and limit the returned data and build pagination feature.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Create a contact form so that user can send question along with their contact information.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Use Google-login option to pre-fill the contact form for user.
