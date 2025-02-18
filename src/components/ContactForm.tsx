@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { TextField, Button } from '@mui/material';
-import { GoogleOAuthProvider, GoogleLogin, CredentialResponse } from '@react-oauth/google';
+import { GoogleOAuthProvider,  CredentialResponse } from '@react-oauth/google';
+import { GoogleLogin } from '@react-oauth/google';
 
-interface User {
-  name: string;
-  email: string;
-}
+// interface User {
+//   name: string;
+//   email: string;
+// }
 
 const ContactForm: React.FC = () => {
   const [name, setName] = useState<string>('');
@@ -25,7 +26,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <GoogleOAuthProvider clientId="YOUR_GOOGLE_CLIENT_ID">
+    <GoogleOAuthProvider clientId="875406630565-0id6eoeq4eap1v966jpdi60eeltqrhuc.apps.googleusercontent.com">
       <form onSubmit={handleSubmit}>
         <TextField label="Name" value={name} onChange={(e) => setName(e.target.value)} fullWidth />
         <TextField label="Email" value={email} onChange={(e) => setEmail(e.target.value)} fullWidth />
